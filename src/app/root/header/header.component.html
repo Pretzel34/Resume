@@ -1,4 +1,4 @@
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" (click)="toggle()" [@openClose]="isOpen ? 'open' : 'closed'">
       <button mat-icon-button [matMenuTriggerFor]="menu"  class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
@@ -22,13 +22,16 @@
       </mat-menu>
       <span>Preston Hrubes</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button mat-icon-button id="img-1" 
+        class="example-icon favorite-icon" aria-label="LinkedIn Icon">
         <img src="\assets\images\linkedin.png" width="30px">
     </button>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button mat-icon-button id="img-2"
+        class="example-icon favorite-icon" aria-label="Facebook Icon">
         <img src="\assets\images\facebook-tran.png" width="30px">
     </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <button mat-icon-button id="img-3"
+        class="example-icon" aria-label="Github Icon">
         <img src="\assets\images\github-1.png" width="30px">
       </button>
     </mat-toolbar>
